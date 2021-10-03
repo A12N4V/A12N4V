@@ -10,6 +10,11 @@
 </a>
 <br>
 
+![Metrics](https://metrics.lecoq.io/A12N4V?template=classic&config.timezone=Asia%2FCalcutta)<br><br>
+
+![arnav's github activity graph](https://activity-graph.herokuapp.com/graph?username=A12N4V&theme=dracula) <br><br>
+
+
 Trophies:
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=A12N4V&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
