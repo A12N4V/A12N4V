@@ -31,8 +31,8 @@ Languages and Tools:
 
 Editors used:
 <br><br>
-<img alt="Vim" src="https://img.shields.io/badge/Vim-212121.svg?style=for-the-badge&logo=vim&logoColor=white"/>
-<img alt="Sublime Text" src="https://img.shields.io/badge/Sublime Text-212121?style=for-the-badge&logo=sublime-text&logoColor=white" />
+<img alt="Vim" src="https://img.shields.io/badge/Vim-000000.svg?style=for-the-badge&logo=vim&logoColor=white"/>
+<img alt="Sublime Text" src="https://img.shields.io/badge/Sublime Text-d3612c?style=for-the-badge&logo=sublime-text&logoColor=white" />
 <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual Studio Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
 
 Contact Me:
