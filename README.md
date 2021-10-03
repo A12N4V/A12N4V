@@ -6,7 +6,7 @@ Updated October, 2021
 > Hi I am Arnav Sharma, I am 14 years old. 
 > I am from Delhi, India.
 > I am open for any projects and would love to contribute to open source and cyber security.
-> I am open to new experiences and ready to colve challenges
+> I am open to new experiences and ready to solve challenges
 
 <hr>
 
