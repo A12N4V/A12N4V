@@ -9,5 +9,7 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=A12N4V&&theme=gotham&layout=compact" width=490/>
 </a>
 <br>
+
 Trophies:
+
 ![trophy](https://github-profile-trophy.vercel.app/?username=A12N4V&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
