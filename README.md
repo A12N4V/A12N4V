@@ -28,6 +28,9 @@ Languages and Tools:
 <img alt="Material design" src="https://img.shields.io/badge/material design-%230081CB.svg?style=for-the-badge&logo=material-design&logoColor=white"/> 
 <img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"/> 
 -->
+Socials:
+
+<a href = "mailto:aaarnavsssharma@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>  
 
 Git Stats:
 <br><a href="https://github.com/anuraghazra/github-readme-stats">
