@@ -14,7 +14,7 @@ Languages and Tools:
 <img alt="BashScript" src="https://img.shields.io/badge/Bash%20Scripting-000000?style=for-the-badge&logo=gnu-bash&logoColor=white">
 <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>
 <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase"/>
-<img alt="Vim" src="https://img.shields.io/badge/Vim-%000000?style=for-the-badge&logo=vim&logoColor=white"/>
+<img alt="Vim" src="https://img.shields.io/badge/Vim-000000.svg?style=for-the-badge&logo=vim&logoColor=white"/>
 <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual Studio Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"/> 
 <!-- To learn:
 <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
