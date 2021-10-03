@@ -29,7 +29,7 @@ Languages and Tools:
 <img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"/> 
 -->
 
-Socials:
+Contact Me:
 <br><br>
 <a href = "mailto:aaarnavsssharma@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>  
 
