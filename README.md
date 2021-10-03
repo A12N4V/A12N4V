@@ -1,11 +1,13 @@
 ## Hello World! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FA12N4V&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E`7E7E7&title=Profile+views&edge_flat=false)](https://github.com/A12N4V/A12N4V) &nbsp; ![GitHub](https://img.shields.io/github/followers/A12N4V?label=Following%21&style=social)
 <hr>
+
 Updated October, 2021
 > Hi I am Arnav Sharma, I am 14 years old. 
 > I am from Delhi, India.
 > I am open for any projects and would love to contribute to open source and cyber security.
 > I am open to new experiences and ready to colve challenges
+
 <hr>
 
 Languages and Tools:
