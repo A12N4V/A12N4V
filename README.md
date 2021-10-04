@@ -22,6 +22,7 @@ Languages, Tools and libraries:
 <img alt="Python" src="https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white"/>
 <img alt="Django" src="https://img.shields.io/badge/Django-347f2d.svg?style=for-the-badge&logo=django&logoColor=white"/>
 <img alt="Flask" src="https://img.shields.io/badge/Flask-000000.svg?style=for-the-badge&logo=flask&logoColor=white"/>
+<img alt="Swift" src="https://img.shields.io/badge/swift-f9880e?style=for-the-badge&logo=swift&logoColor=white" />
 <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>
 <img alt="BashScript" src="https://img.shields.io/badge/Bash%20Scripting-000000?style=for-the-badge&logo=gnu-bash&logoColor=white">
 <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase"/>
