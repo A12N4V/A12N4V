@@ -10,7 +10,7 @@ Updated October, 2021
 
 <hr>
 
-Languages and Tools:
+Languages, Tools and libraries:
 <br><br>
 <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
 <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/> 
