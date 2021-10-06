@@ -8,7 +8,6 @@ Updated October, 2021
 > I am open for any projects and would love to contribute to open source and cyber security.
 > I am open to new experiences and ready to solve challenges
 
-electron
 <hr>
 
 Languages and tools:
