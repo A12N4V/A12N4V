@@ -67,4 +67,4 @@ Git Stats:
 
 Trophies:
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=A12N4V&theme=onedark)]
+![trophy](https://github-profile-trophy.vercel.app/?username=A12N4V&theme=onedark)
