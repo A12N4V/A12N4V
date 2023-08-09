@@ -22,29 +22,8 @@ Languages and tools:
 <img alt="MongoDB" src="https://img.shields.io/badge/mongoDB-green?style=for-the-badge&logo=mongoDB&logoColor=white" />
 <img alt="Python" src="https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white"/>
 <img alt="Django" src="https://img.shields.io/badge/Django-347f2d.svg?style=for-the-badge&logo=django&logoColor=white"/>
-<img alt="Flask" src="https://img.shields.io/badge/Flask-000000.svg?style=for-the-badge&logo=flask&logoColor=white"/>
-<img alt="Swift" src="https://img.shields.io/badge/swift-f9880e?style=for-the-badge&logo=swift&logoColor=white" />
-<img alt="SwiftUI" src="https://img.shields.io/badge/Swift UI-187ae2?style=for-the-badge&logo=swift&logoColor=black" />
 <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>
-<img alt="BashScript" src="https://img.shields.io/badge/Bash%20Scripting-000000?style=for-the-badge&logo=gnu-bash&logoColor=white">
 <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase"/>
-<!-- To learn:
-<img alt="C" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"/> 
-<img alt="Electron.js" src="https://img.shields.io/badge/electron.js-656669?style=for-the-badge&logo=electron&logoColor=cyan">
-<img alt="React Native" src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/> 
-<img alt="Babel" src="https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black" />
-<img alt="Markdown" src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white"> 
-<img alt="Bitbucket" src="https://img.shields.io/badge/Bitbucket-blue?style=for-the-badge&logo=bitbucket&logoColor=white"> 
-<img alt="Material UI" src="https://img.shields.io/badge/materialui-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white"/> 
-<img alt="Material design" src="https://img.shields.io/badge/material design-%230081CB.svg?style=for-the-badge&logo=material-design&logoColor=white"/> 
--->
-
-Editors used:
-<br><br>
-<img alt="Xcode" src="https://img.shields.io/badge/xcode-323330?style=for-the-badge&logo=xcode&logoColor=white" />
-<img alt="Sublime Text" src="https://img.shields.io/badge/Sublime Text-d3612c?style=for-the-badge&logo=sublime-text&logoColor=white" />
-<img alt="Vim" src="https://img.shields.io/badge/Vim-000000.svg?style=for-the-badge&logo=vim&logoColor=white"/>
-<img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual Studio Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"/>
 
 Contact Me:
 <br><br>
