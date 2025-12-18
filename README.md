@@ -1,6 +1,6 @@
 ## WHOAMI <img src="https://c.tenor.com/ELqBBio6uboAAAAi/thinking-face-joypixels.gif" width="30px" />
 <hr>
-I am Arnav, a student at UC Irvine. Really interested in medical software and open source collaborations. Reach me out if you like my work
+I am Arnav, a student at UC Irvine. Really interested in medical software and open source collaborations.
 <hr>
 
 Languages and tools:
