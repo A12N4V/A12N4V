@@ -1,16 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 165" width="100%" height="165">
   <defs>
     <style>
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
       .term-bg { fill: #000000; stroke: #1a1a1a; stroke-width: 1; rx: 6; }
       .term-header { fill: #080808; }
-      .term-text { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace; font-size: 11.5px; fill: #d0d0d0; }
+      .term-text { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; font-size: 11.5px; fill: #d0d0d0; }
       .term-prompt { fill: #3fb950; font-weight: bold; }
       .term-cmd { fill: #f0efea; font-weight: bold; }
       .term-num { fill: #d29922; font-weight: bold; }
       .term-key { fill: #58a6ff; font-weight: 600; }
       .term-arrow { fill: #555555; }
       .term-desc { fill: #999999; }
+      .cursor { fill: #f0efea; animation: blink 0.8s infinite; }
     </style>
+
+    <!-- Clip 0: Command cat heuristics.txt -->
+    <clipPath id="clip-heur-cmd">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 160; 160; 160; 0" 
+                 keyTimes="0; 0.08; 0.18; 0.92; 0.96; 1" 
+                 dur="16s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip 1: Field [01] First Principles -->
+    <clipPath id="clip-heur-1">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 600; 600; 600; 0" 
+                 keyTimes="0; 0.19; 0.28; 0.92; 0.96; 1" 
+                 dur="16s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip 2: Field [02] Inversion -->
+    <clipPath id="clip-heur-2">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 620; 620; 620; 0" 
+                 keyTimes="0; 0.29; 0.38; 0.92; 0.96; 1" 
+                 dur="16s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip 3: Field [03] Bottleneck Focus -->
+    <clipPath id="clip-heur-3">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 640; 640; 640; 0" 
+                 keyTimes="0; 0.39; 0.48; 0.92; 0.96; 1" 
+                 dur="16s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip 4: Field [04] Feedback Tightness -->
+    <clipPath id="clip-heur-4">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 640; 640; 640; 0" 
+                 keyTimes="0; 0.49; 0.58; 0.92; 0.96; 1" 
+                 dur="16s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
   </defs>
 
   <!-- Terminal Window Background (Absolute Black) -->
@@ -26,15 +81,31 @@
   <circle cx="44" cy="14" r="4" fill="#27c93f" />
   <text x="400" y="18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#555555">heuristics.sh</text>
 
-  <!-- Content lines -->
+  <!-- Content line 1: Prompt + Command -->
   <g transform="translate(20, 48)">
     <text class="term-text">
       <tspan class="term-prompt">❯ </tspan>
-      <tspan class="term-cmd">cat heuristics.txt</tspan>
     </text>
+    <g transform="translate(15, 0)" clip-path="url(#clip-heur-cmd)">
+      <text class="term-text">
+        <tspan class="term-cmd">cat heuristics.txt</tspan>
+      </text>
+    </g>
+    <!-- Cursor for command -->
+    <rect y="-10" width="6.5" height="13" class="cursor">
+      <animate attributeName="x" 
+               values="15; 15; 155; 155; 155; 15" 
+               keyTimes="0; 0.08; 0.18; 0.20; 0.96; 1" 
+               dur="16s" repeatCount="indefinite" />
+      <animate attributeName="opacity" 
+               values="1; 1; 1; 0; 0; 0" 
+               keyTimes="0; 0.08; 0.18; 0.20; 0.96; 1" 
+               dur="16s" repeatCount="indefinite" />
+    </rect>
   </g>
 
-  <g transform="translate(20, 72)">
+  <!-- Field 1: First Principles -->
+  <g transform="translate(20, 72)" clip-path="url(#clip-heur-1)">
     <text class="term-text">
       <tspan class="term-num">[01] </tspan>
       <tspan class="term-key">FIRST PRINCIPLES</tspan>
@@ -43,7 +114,8 @@
     </text>
   </g>
 
-  <g transform="translate(20, 94)">
+  <!-- Field 2: Inversion -->
+  <g transform="translate(20, 94)" clip-path="url(#clip-heur-2)">
     <text class="term-text">
       <tspan class="term-num">[02] </tspan>
       <tspan class="term-key">INVERSION</tspan>
@@ -52,7 +124,8 @@
     </text>
   </g>
 
-  <g transform="translate(20, 116)">
+  <!-- Field 3: Bottleneck Focus -->
+  <g transform="translate(20, 116)" clip-path="url(#clip-heur-3)">
     <text class="term-text">
       <tspan class="term-num">[03] </tspan>
       <tspan class="term-key">BOTTLENECK FOCUS</tspan>
@@ -61,12 +134,26 @@
     </text>
   </g>
 
+  <!-- Field 4: Feedback Tightness -->
   <g transform="translate(20, 138)">
-    <text class="term-text">
-      <tspan class="term-num">[04] </tspan>
-      <tspan class="term-key">FEEDBACK TIGHTNESS</tspan>
-      <tspan class="term-arrow">: </tspan>
-      <tspan class="term-desc">Minimize the time between hypothesis, execution, and reality</tspan>
-    </text>
+    <g clip-path="url(#clip-heur-4)">
+      <text class="term-text">
+        <tspan class="term-num">[04] </tspan>
+        <tspan class="term-key">FEEDBACK TIGHTNESS</tspan>
+        <tspan class="term-arrow">: </tspan>
+        <tspan class="term-desc">Minimize the time between hypothesis, execution, and reality</tspan>
+      </text>
+    </g>
+    <!-- Cursor at end of Field 4 -->
+    <rect y="-10" width="6.5" height="13" class="cursor">
+      <animate attributeName="x" 
+               values="15; 15; 580; 580; 580; 15" 
+               keyTimes="0; 0.49; 0.58; 0.92; 0.96; 1" 
+               dur="16s" repeatCount="indefinite" />
+      <animate attributeName="opacity" 
+               values="0; 0; 1; 1; 0; 0" 
+               keyTimes="0; 0.19; 0.20; 0.92; 0.96; 1" 
+               dur="16s" repeatCount="indefinite" />
+    </rect>
   </g>
 </svg>
