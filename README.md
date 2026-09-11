@@ -1,9 +1,12 @@
-<div align="left" style="background-color: #000000; color: #e6edf3; padding: 16px; min-height: 100vh;">
+<div align="center" style="background-color: #000000; color: #e6edf3; padding: 0; min-height: 100vh;">
 
-<h1 align="center">ARNV</h1>
+<table width="100%" border="0" bgcolor="#000000" style="background-color: #000000; border: 1px solid #1a1a1a; border-radius: 8px; border-collapse: collapse;">
+<tr>
+<td bgcolor="#000000" style="background-color: #000000; color: #e6edf3; padding: 24px; border: none;">
 
 <div align="center">
-  <img src="assets/header_art.jpg" width="100%" alt="AI art is good" style="border-radius: 6px; margin: 12px 0;" />
+  <img src="assets/arnav_title.png" width="380" alt="ARNV" /><br>
+  <img src="assets/header_art.jpg" width="100%" alt="AI art is good" style="border-radius: 6px; margin: 12px 0;" /><br>
   <img src="assets/terminal_bio.svg" width="100%" alt="arnav@uci:~" />
 </div>
 
@@ -91,5 +94,9 @@ When approaching complex engineering and research challenges:
 </p>
 
 </div>
+
+</td>
+</tr>
+</table>
 
 </div>

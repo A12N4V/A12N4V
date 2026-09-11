@@ -4,3 +4,4 @@ build_preview.py
 gen_arch.py
 __pycache__/
 .DS_Store
+assets/*.ttf
