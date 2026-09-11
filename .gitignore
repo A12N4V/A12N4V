@@ -1,0 +1,5 @@
+# Local preview & build artifacts
+preview.html
+build_preview.py
+__pycache__/
+.DS_Store
