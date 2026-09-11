@@ -7,13 +7,43 @@
       }
       .term-bg { fill: #000000; stroke: #1a1a1a; stroke-width: 1; rx: 6; }
       .term-header { fill: #080808; }
-      .term-text { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #d0d0d0; }
+      .term-text { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; font-size: 13px; fill: #d0d0d0; }
       .term-prompt { fill: #3fb950; font-weight: bold; }
       .term-cmd { fill: #f0efea; font-weight: bold; }
       .term-key { fill: #58a6ff; }
       .term-dim { fill: #666666; }
-      .cursor { fill: #f0efea; animation: blink 1s infinite; }
+      .cursor { fill: #f0efea; animation: blink 0.8s infinite; }
     </style>
+
+    <!-- Clip 1: whoami typing (1.2s to 2.4s out of 14s) -->
+    <clipPath id="clip-cmd1">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 70; 70; 70; 0" 
+                 keyTimes="0; 0.08; 0.18; 0.92; 0.96; 1" 
+                 dur="14s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip 2: Identity field reveal (2.6s to 4.0s) -->
+    <clipPath id="clip-field1">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 340; 340; 340; 0" 
+                 keyTimes="0; 0.20; 0.32; 0.92; 0.96; 1" 
+                 dur="14s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
+
+    <!-- Clip 3: Interests field reveal (4.4s to 6.4s) -->
+    <clipPath id="clip-field2">
+      <rect x="0" y="-15" width="0" height="30">
+        <animate attributeName="width" 
+                 values="0; 0; 540; 540; 540; 0" 
+                 keyTimes="0; 0.35; 0.52; 0.92; 0.96; 1" 
+                 dur="14s" repeatCount="indefinite" />
+      </rect>
+    </clipPath>
   </defs>
 
   <!-- Terminal Window Background (Absolute Black) -->
@@ -29,16 +59,31 @@
   <circle cx="50" cy="15" r="4.5" fill="#27c93f" />
   <text x="400" y="19" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10.5" fill="#555555">arnav@uci:~</text>
 
-  <!-- Command line 1 -->
+  <!-- Command line 1: Prompt + whoami -->
   <g transform="translate(24, 58)">
     <text class="term-text">
       <tspan class="term-prompt">❯ </tspan>
-      <tspan class="term-cmd">whoami</tspan>
     </text>
+    <g transform="translate(16, 0)" clip-path="url(#clip-cmd1)">
+      <text class="term-text">
+        <tspan class="term-cmd">whoami</tspan>
+      </text>
+    </g>
+    <!-- Cursor 1 (active while typing whoami) -->
+    <rect y="-11" width="7.5" height="15" class="cursor">
+      <animate attributeName="x" 
+               values="16; 16; 75; 75; 75; 16" 
+               keyTimes="0; 0.08; 0.18; 0.20; 0.96; 1" 
+               dur="14s" repeatCount="indefinite" />
+      <animate attributeName="opacity" 
+               values="1; 1; 1; 0; 0; 0" 
+               keyTimes="0; 0.08; 0.18; 0.20; 0.96; 1" 
+               dur="14s" repeatCount="indefinite" />
+    </rect>
   </g>
 
-  <!-- Output lines -->
-  <g transform="translate(24, 82)">
+  <!-- Output field 1: Identity -->
+  <g transform="translate(24, 82)" clip-path="url(#clip-field1)">
     <text class="term-text">
       <tspan class="term-dim">→ </tspan>
       <tspan class="term-key">Arnav</tspan>
@@ -47,16 +92,29 @@
     </text>
   </g>
 
+  <!-- Output field 2: Interests -->
   <g transform="translate(24, 106)">
-    <text class="term-text">
-      <tspan class="term-dim">→ </tspan>
-      <tspan class="term-dim">Interests: </tspan>
-      <tspan fill="#d29922">cybernetics</tspan>
-      <tspan class="term-dim"> · </tspan>
-      <tspan fill="#58a6ff">systems thinking</tspan>
-      <tspan class="term-dim"> · </tspan>
-      <tspan fill="#3fb950">artificial intelligence</tspan>
-    </text>
-    <rect x="525" y="-11" width="7.5" height="15" class="cursor" />
+    <g clip-path="url(#clip-field2)">
+      <text class="term-text">
+        <tspan class="term-dim">→ </tspan>
+        <tspan class="term-dim">Interests: </tspan>
+        <tspan fill="#d29922">cybernetics</tspan>
+        <tspan class="term-dim"> · </tspan>
+        <tspan fill="#58a6ff">systems thinking</tspan>
+        <tspan class="term-dim"> · </tspan>
+        <tspan fill="#3fb950">artificial intelligence</tspan>
+      </text>
+    </g>
+    <!-- Cursor 2 (appears at end of Line 3 and blinks for 5+ seconds) -->
+    <rect y="-11" width="7.5" height="15" class="cursor">
+      <animate attributeName="x" 
+               values="16; 16; 525; 525; 525; 16" 
+               keyTimes="0; 0.35; 0.52; 0.92; 0.96; 1" 
+               dur="14s" repeatCount="indefinite" />
+      <animate attributeName="opacity" 
+               values="0; 0; 1; 1; 0; 0" 
+               keyTimes="0; 0.20; 0.21; 0.92; 0.96; 1" 
+               dur="14s" repeatCount="indefinite" />
+    </rect>
   </g>
 </svg>

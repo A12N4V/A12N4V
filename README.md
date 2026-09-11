@@ -1,11 +1,10 @@
-<div align="center" style="background-color: #000000; color: #ffffff; padding: 10px;">
+<div align="left" style="background-color: #000000; color: #e6edf3; padding: 16px; min-height: 100vh;">
 
-  <img src="assets/arnav_title.png" width="460" alt="Arnav" />
+<h1 align="center">ARNV</h1>
 
+<div align="center">
   <img src="assets/header_art.jpg" width="100%" alt="AI art is good" style="border-radius: 6px; margin: 12px 0;" />
-
   <img src="assets/terminal_bio.svg" width="100%" alt="arnav@uci:~" />
-
 </div>
 
 I am an undergraduate student and software engineer at the **University of California, Irvine**. 
@@ -90,5 +89,7 @@ When approaching complex engineering and research challenges:
   <code>[ EMAIL // aaarnavsssharma@gmail.com ]</code> &nbsp;·&nbsp;
   <code>[ UC IRVINE ]</code>
 </p>
+
+</div>
 
 </div>
