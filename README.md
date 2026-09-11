@@ -1,84 +1,87 @@
-<div align="center">
-
-<img src="assets/header.svg" width="100%" alt="Arnav - Systems Thinking, Neuroscience, AI" />
-
-</div>
-
----
-
-## The Question That Drives My Work
-
-> *"A twenty-watt organ of soft tissue navigates an unpredictable world, integrates multi-sensory streams in real time, builds internal causal models, and continuously reorganizes its own architecture—all while consuming less power than a dim household lightbulb.*
-> 
-> *Meanwhile, our most advanced computing clusters consume megawatts to approximate statistical patterns on static datasets.*
->
-> *Why is living intelligence so robust, adaptable, and self-repairing, while artificial systems remain brittle and fragile? The answer isn't raw compute. It's **systems architecture, non-equilibrium thermodynamics, and circular feedback**."*
-
-Hey, I'm **Arnav**. I'm an undergraduate software engineer and student researcher at the **University of California, Irvine**.
-
-My curiosity lives at the intersection of **systems thinking, computational neuroscience, and artificial intelligence**. Rather than treating machine learning as purely a curve-fitting problem or biology as an isolated collection of anatomy, I study how living brains actually solve the problem of autonomy—and how those architectural principles can help us build more resilient, adaptive software.
-
----
-
-## What I'm Exploring
-
-### 1. Biological Computation vs. Synthetic Pipelines
-Today's artificial neural networks are largely feedforward pipelines: they take a batch of data, compute matrix multiplications, and calculate a loss. But biological wetware operates continuously. Neurons don't wait for "batches"—they process asynchronous spike trains, adapt local synaptic weights in real time without catastrophic forgetting, and run in continuous time. I explore how ideas from neuromorphic computing and dynamical systems can bridge this gap.
-
-### 2. Closed-Loop Systems & Circular Causality
-In classical software, computation is linear: $\text{Input} \to \text{Transform} \to \text{Output}$. In living organisms, linear causality doesn't exist. Every action an organism takes changes the physical environment, which immediately alters sensory feedback, which updates internal beliefs, which dictates the next action. Living intelligence is an unbroken, self-regulating feedback loop.
-
-### 3. Strange Loops & Emergent Intelligence
-How does agency and self-awareness emerge from physical matter? Through recursive self-reference—what Douglas Hofstadter termed *strange loops*. When simple deterministic micro-rules interact within a closed feedback hierarchy, emergent macroscopic behaviors arise that cannot be explained by looking at individual parts in isolation.
-
----
-
-## Systems Architecture: The Closed-Loop Mind
-
-To visualize how living intelligence coordinates perception, prediction, and action, I model the brain as a continuous, closed-loop cybernetic system:
+# Arnav
 
 <p align="center">
-  <img src="assets/system_architecture.svg" width="100%" alt="Closed-Loop Cybernetic Cognitive Architecture" />
+  <img src="assets/header_art.jpg" width="100%" alt="AI art is good" style="border-radius: 6px;" />
 </p>
 
-### How the Flow Works:
-1. **Sensory Ingestion (Afferent Stream)**: Physical stimuli from the environment are continuously transduced by sensory receptors into spatiotemporal spike events.
-2. **Prediction Error Computation**: The brain doesn't just passively receive inputs; it continuously predicts what it should sense. The **Predictive Comparator** subtracts top-down predictions from bottom-up sensations to calculate the error residual ($\varepsilon$).
-3. **Generative World Model**: The central core updates its latent state estimates based on prediction errors, maintaining an internal model of the external world.
-4. **Efference Copy (Internal Anticipation)**: When motor actions are planned, an internal copy (*efference copy*, shown in purple) is sent back to the world model before execution, allowing the system to anticipate the sensory consequences of its own movement.
-5. **Homeostatic Actuation & Work**: Motor commands intervene in the physical world, completing the causal circle.
+<p align="center">
+  <img src="assets/terminal_bio.svg" width="100%" alt="arnav@uci:~" />
+</p>
+
+I'm an undergraduate student and software engineer at the **University of California, Irvine**. 
+
+I am deeply interested in **cybernetics, systems thinking, and artificial intelligence**—particularly the intersection where biological computation and synthetic systems meet. I want to understand how living organisms solve autonomy, continuous adaptation, and self-repair on mere watts of energy, and how we can apply those principles to build better software and intelligent machines.
 
 ---
 
-## Technical Stack & Substrates
+## Renders & Biological Architectures
 
-When translating theoretical concepts into software, I prioritize low-level performance, memory safety, and reproducible architectures:
+These are authentic anatomical and neural studies from my work in computational biology:
 
-<table width="100%">
+<table width="100%" border="0">
   <tr>
-    <td width="33%" valign="top">
-      <strong>SYSTEMS &amp; LANGUAGES</strong><br><br>
-      <code>• Rust</code> <em>(memory safety &amp; concurrency)</em><br>
-      <code>• C / C++</code> <em>(native performance &amp; FFI)</em><br>
-      <code>• Python 3.12+</code> <em>(scientific modeling)</em><br>
-      <code>• TypeScript</code> <em>(tooling &amp; interfaces)</em>
+    <td width="33.33%" align="center" valign="top" style="background:#090b10; border:1px solid #21262d; padding:12px;">
+      <img src="assets/synapses_square.jpg" width="100%" style="border-radius:4px;" alt="Synaptic Networks" /><br><br>
+      <strong style="color:#f0efea; font-size:12px;">SYNAPTIC CONNECTIVITY</strong><br>
+      <sub style="color:#8b949e; font-size:10px;">NEURAL TRANSMISSION</sub>
+      <p style="color:#8b949e; font-size:11px; line-height:1.45; text-align:left; margin-top:8px;">
+        Local synaptic junctions and dendritic networks capable of asynchronous, continuous learning without catastrophic forgetting.
+      </p>
     </td>
-    <td width="33%" valign="top">
-      <strong>SCIENTIFIC COMPUTING</strong><br><br>
-      <code>• PyTorch</code> <em>(tensor dynamics &amp; neural models)</em><br>
-      <code>• NumPy / SciPy</code> <em>(linear algebra &amp; numerics)</em><br>
-      <code>• MNE-Python</code> <em>(electrophysiology &amp; signals)</em><br>
-      <code>• Three.js / WebGL</code> <em>(visual telemetry)</em>
+    <td width="33.33%" align="center" valign="top" style="background:#090b10; border:1px solid #21262d; padding:12px;">
+      <img src="assets/cajal_purkinje_square.jpg" width="100%" style="border-radius:4px;" alt="Cajal Purkinje Cell" /><br><br>
+      <strong style="color:#f0efea; font-size:12px;">PURKINJE CELL</strong><br>
+      <sub style="color:#8b949e; font-size:10px;">SANTIAGO RAMÓN Y CAJAL</sub>
+      <p style="color:#8b949e; font-size:11px; line-height:1.45; text-align:left; margin-top:8px;">
+        The massive arborization of a cerebellar Purkinje neuron—integrating thousands of concurrent inputs into coordinated real-time action.
+      </p>
     </td>
-    <td width="33%" valign="top">
-      <strong>ARCHITECTURAL PRINCIPLES</strong><br><br>
-      <code>• Zero-cost abstractions</code><br>
-      <code>• Lock-free ring buffers</code><br>
-      <code>• Event-driven asynchronous pipelines</code><br>
-      <code>• Deterministic computational provenance</code>
+    <td width="33.33%" align="center" valign="top" style="background:#090b10; border:1px solid #21262d; padding:12px;">
+      <img src="assets/brain_square.jpg" width="100%" style="border-radius:4px;" alt="Cerebral Architecture" /><br><br>
+      <strong style="color:#f0efea; font-size:12px;">CORTICAL ARCHITECTURE</strong><br>
+      <sub style="color:#8b949e; font-size:10px;">WHOLE-ORGANISM INTEGRATION</sub>
+      <p style="color:#8b949e; font-size:11px; line-height:1.45; text-align:left; margin-top:8px;">
+        High-level cortical manifolds coordinating sensory feedback, internal generative world models, and homeostatic regulation.
+      </p>
     </td>
   </tr>
 </table>
+
+---
+
+## Systems Thinking Basics
+
+Systems thinking is the practice of understanding how things influence one another within a whole:
+
+- **Think in Loops, Not Lines**: In classical logic, cause and effect are linear: $A \to B$. In living systems, causality is circular: $A \to B \to C \to A$. Your actions alter your environment, which changes what you sense next.
+- **Look for the Delays**: The effect of an intervention rarely shows up immediately. When there's a lag between action and result, people often overcorrect—destabilizing the system.
+- **Emergence Over Components**: You can't understand an ant colony by dissecting an ant, and you can't understand consciousness by isolating a neuron. The power lives in the feedback between the parts.
+- **Balancing vs. Compounding**: Reinforcing loops amplify changes (exponential growth or spirals); balancing loops push back toward equilibrium (homeostasis). Resilient systems need both.
+
+---
+
+## Problem Solving Basics
+
+When approaching complex engineering and research challenges:
+
+<p align="center">
+  <img src="assets/terminal_problem_solving.svg" width="100%" alt="heuristics.sh" />
+</p>
+
+- **First Principles**: Boil things down to their fundamental truths and reason upwards from there. Reject assumptions borrowed from convention.
+- **Inversion**: Instead of asking *"How do I guarantee success?"*, ask *"What would cause this to fail completely?"* Eliminate the failure modes first.
+- **Find the Active Bottleneck**: In any system with multiple steps, only one constraint limits total throughput at any given time. Optimizing anything else is wasted effort.
+- **Tighten the Feedback Loop**: Shorten the time between writing code, testing a hypothesis, and observing reality. Speed comes from iteration speed, not rushing.
+
+---
+
+## On Theosis & Where Humanity Is Heading
+
+> *"The future of humanity isn't about escaping our biology or surrendering to silicon. It's about **theosis** in its most grounded and human sense: humanity slowly learning to steward its own evolutionary trajectory.*
+> 
+> *For millions of years, evolution was driven by blind physical pressure. Now, through language, science, and computing, consciousness has begun to understand and shape itself. The goal isn't to build artificial minds that make humans obsolete—it's to design systems that harmonize with living intelligence, expanding our capacity to understand, heal, and create."*
+>
+> <sub>*"We are as gods and might as well get good at it."* — Stewart Brand, Whole Earth Catalog (1968)</sub>
 
 ---
 
@@ -87,9 +90,7 @@ When translating theoretical concepts into software, I prioritize low-level perf
 <p align="center">
   <code>[ GITHUB // @A12N4V ]</code> &nbsp;·&nbsp;
   <code>[ EMAIL // aaarnavsssharma@gmail.com ]</code> &nbsp;·&nbsp;
-  <code>[ UNIVERSITY OF CALIFORNIA, IRVINE ]</code>
+  <code>[ UC IRVINE ]</code>
 </p>
-
-<sub><em>"We are not stuff that abides, but patterns that perpetuate themselves."</em> — Norbert Wiener</sub>
 
 </div>
