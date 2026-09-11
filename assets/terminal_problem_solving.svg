@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 165" width="100%" height="165">
+  <defs>
+    <style>
+      .term-bg { fill: #0a0d14; stroke: #21262d; stroke-width: 1; rx: 6; }
+      .term-header { fill: #10141d; }
+      .term-text { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace; font-size: 11.5px; fill: #c9d1d9; }
+      .term-prompt { fill: #3fb950; font-weight: bold; }
+      .term-cmd { fill: #f0efea; font-weight: bold; }
+      .term-num { fill: #d29922; font-weight: bold; }
+      .term-key { fill: #58a6ff; font-weight: 600; }
+      .term-arrow { fill: #6e7681; }
+      .term-desc { fill: #8b949e; }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect width="800" height="165" class="term-bg" />
+  
+  <!-- Terminal Title Bar -->
+  <path d="M 0 6 Q 0 0 6 0 L 794 0 Q 800 0 800 6 L 800 28 L 0 28 Z" class="term-header" />
+  <line x1="0" y1="28" x2="800" y2="28" stroke="#21262d" stroke-width="1" />
+
+  <!-- Window Dots -->
+  <circle cx="16" cy="14" r="4" fill="#ff5f56" />
+  <circle cx="30" cy="14" r="4" fill="#ffbd2e" />
+  <circle cx="44" cy="14" r="4" fill="#27c93f" />
+  <text x="400" y="18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#6e7681">heuristics.sh</text>
+
+  <!-- Content lines -->
+  <g transform="translate(20, 48)">
+    <text class="term-text">
+      <tspan class="term-prompt">❯ </tspan>
+      <tspan class="term-cmd">cat heuristics.txt</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20, 72)">
+    <text class="term-text">
+      <tspan class="term-num">[01] </tspan>
+      <tspan class="term-key">FIRST PRINCIPLES</tspan>
+      <tspan class="term-arrow"> → </tspan>
+      <tspan class="term-desc">Strip every problem to ground truth; ignore analogy</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20, 94)">
+    <text class="term-text">
+      <tspan class="term-num">[02] </tspan>
+      <tspan class="term-key">INVERSION</tspan>
+      <tspan class="term-arrow">       → </tspan>
+      <tspan class="term-desc">Ask "what would guarantee failure?" and eliminate it first</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20, 116)">
+    <text class="term-text">
+      <tspan class="term-num">[03] </tspan>
+      <tspan class="term-key">BOTTLENECK FOCUS</tspan>
+      <tspan class="term-arrow">→ </tspan>
+      <tspan class="term-desc">Optimizing anything other than the active constraint is waste</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(20, 138)">
+    <text class="term-text">
+      <tspan class="term-num">[04] </tspan>
+      <tspan class="term-key">FEEDBACK TIGHTNESS</tspan>
+      <tspan class="term-arrow">→ </tspan>
+      <tspan class="term-desc">Minimize the time between hypothesis, execution, and reality</tspan>
+    </text>
+  </g>
+</svg>

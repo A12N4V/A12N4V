@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 145" width="100%" height="145">
+  <defs>
+    <style>
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .term-bg { fill: #0a0d14; stroke: #21262d; stroke-width: 1; rx: 6; }
+      .term-header { fill: #10141d; }
+      .term-text { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #c9d1d9; }
+      .term-prompt { fill: #3fb950; font-weight: bold; }
+      .term-cmd { fill: #f0efea; font-weight: bold; }
+      .term-key { fill: #58a6ff; }
+      .term-dim { fill: #6e7681; }
+      .cursor { fill: #f0efea; animation: blink 1s infinite; }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect width="800" height="145" class="term-bg" />
+  
+  <!-- Terminal Title Bar -->
+  <path d="M 0 6 Q 0 0 6 0 L 794 0 Q 800 0 800 6 L 800 30 L 0 30 Z" class="term-header" />
+  <line x1="0" y1="30" x2="800" y2="30" stroke="#21262d" stroke-width="1" />
+
+  <!-- Window Dots -->
+  <circle cx="18" cy="15" r="4.5" fill="#ff5f56" />
+  <circle cx="34" cy="15" r="4.5" fill="#ffbd2e" />
+  <circle cx="50" cy="15" r="4.5" fill="#27c93f" />
+  <text x="400" y="19" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10.5" fill="#6e7681">arnav@uci:~</text>
+
+  <!-- Command line 1 -->
+  <g transform="translate(24, 58)">
+    <text class="term-text">
+      <tspan class="term-prompt">❯ </tspan>
+      <tspan class="term-cmd">whoami</tspan>
+    </text>
+  </g>
+
+  <!-- Output lines -->
+  <g transform="translate(24, 82)">
+    <text class="term-text">
+      <tspan class="term-dim">→ </tspan>
+      <tspan class="term-key">Arnav</tspan>
+      <tspan class="term-dim"> · Student @ </tspan>
+      <tspan fill="#f0efea">UC Irvine</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(24, 106)">
+    <text class="term-text">
+      <tspan class="term-dim">→ </tspan>
+      <tspan class="term-dim">Interests: </tspan>
+      <tspan fill="#d29922">cybernetics</tspan>
+      <tspan class="term-dim"> · </tspan>
+      <tspan fill="#58a6ff">systems thinking</tspan>
+      <tspan class="term-dim"> · </tspan>
+      <tspan fill="#3fb950">artificial intelligence</tspan>
+    </text>
+    <rect x="525" y="-11" width="7.5" height="15" class="cursor" />
+  </g>
+</svg>
