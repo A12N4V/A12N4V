@@ -1,4 +1,6 @@
-# Arnav
+<p align="center">
+  <img src="assets/arnav_title.png" width="460" alt="Arnav" />
+</p>
 
 <p align="center">
   <img src="assets/header_art.jpg" width="100%" alt="AI art is good" style="border-radius: 6px;" />
