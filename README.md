@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/arnav_title.png" width="100%" alt="ARNV" /><br>
-  <img src="assets/header_art.jpg" height="100px" width="100%" alt="AI art is good" style="border-radius: 6px; margin: 12px 0;" /><br>
+  <img src="assets/header_art.jpg" height="400px" width="100%" alt="AI art is good" style="border-radius: 6px; margin: 12px 0;" /><br>
   <img src="assets/terminal_bio.svg" width="100%" alt="arnav@uci:~" />
 </div>
 
