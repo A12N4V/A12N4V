@@ -6,3 +6,4 @@ __pycache__/
 .DS_Store
 assets/*.ttf
 tools/plates/out/
+tools/plates/pulse.json
