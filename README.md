@@ -1,32 +1,26 @@
 <div align="center">
-  <img src="assets/classical-systems-banner.jpg" width="100%" alt="Athena, Hermes, and Asclepius in a neoclassical engraving: technical wisdom, exchange, and medicine" />
-  <br />
-  <sub>ATHENA · HERMES · ASCLEPIUS &nbsp;/&nbsp; WISDOM · EXCHANGE · MEDICINE</sub>
+  <img src="assets/a12n4v-pantheon.png" width="100%" alt="Plate I, Pantheon: dithered neoclassical busts of Athena, Hermes, and Asclepius, for wisdom, exchange, and medicine." />
 </div>
 
 # Arnav Sharma
 
-Undergraduate at **UC Irvine** exploring neural systems, AI, and medical technology.
+Undergraduate at **UC Irvine**, working where **medicine** meets **computation**: biodigital twins, medical AI, and the cybernetics that ties them together. I build **Homonin**, a cyber-medical research workspace.
 
-I’m interested in biologically grounded AI and software that helps us understand and improve human health.
+A body produces **signals**. A model turns those signals into **signs**. A controller acts on the signs, and the body answers. I work on that loop.
 
-**FOCUS** &nbsp; Neural systems · adaptive AI · medtech
+**FOCUS** &nbsp; biodigital twins · medical AI · neural systems · cybernetics
 
-## A direction of travel
-
-<div align="center">
-  <img src="assets/adaptive-care-loop.gif" width="100%" alt="Animated feedback loop: observe a biological signal, model the internal state, decide on an adaptive policy, provide care, then measure and update." />
-</div>
-
-## Neural atlas
+<br />
 
 <div align="center">
-  <img src="assets/neural-atlas-dither.png" width="100%" alt="Dithered monochrome neural plates: a Purkinje cell tree, cortical layers, and an anatomical brain illustration." />
-  <sub>PURKINJE TREE &nbsp;·&nbsp; CORTICAL LAYERS &nbsp;·&nbsp; BRAIN ANATOMY</sub>
+  <img src="assets/a12n4v-systema.gif" width="100%" alt="Plate II, Systema Viabile, after Stafford Beer: an animated Viable System Model with Homonin at the center. Policy, intelligence, control, coordination, models, research, and the environment of patients, clinics, and the literature each send signals into Homonin, which then sends feedback back out to every element." />
+  <sub>Beer's <i>Viable System Model</i> (<i>Brain of the Firm</i>, 1972), with Homonin at the center. Every system sends its signal in, Homonin integrates them, and feedback goes back out to each one.</sub>
 </div>
 
 ---
 
 <div align="center">
+  <sub><b>CORPVS · SIGNVM · MACHINA</b></sub>
+  <br />
   <sub><a href="https://a12n4v.github.io">SITE</a> &nbsp;·&nbsp; <a href="mailto:aaarnavsssharma@gmail.com">EMAIL</a> &nbsp;·&nbsp; UC IRVINE</sub>
 </div>
