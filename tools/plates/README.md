@@ -25,7 +25,7 @@ Glyphs are Homonin's 24×24 pixel icons, copied into `src/glyphs/`. A few more (
 
 `.github/workflows/plugins.yml` runs every day and on every push to `main`. It:
 
-1. generates the contribution snake (GitHub palette and Homonin palette),
+1. generates the contribution snake,
 2. runs `fetch-pulse.js`, which reads contributions, repos, stars, followers and languages through the GraphQL API with the workflow's `GITHUB_TOKEN`,
 3. renders `a12n4v-pvlsvs` with Playwright,
 4. pushes everything to the `output` branch.
