@@ -5,3 +5,4 @@ gen_arch.py
 __pycache__/
 .DS_Store
 assets/*.ttf
+tools/plates/out/
