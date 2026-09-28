@@ -7,12 +7,15 @@ const SERIF = 'FreeSerif';
 const MONO = 'Unifont';
 const M = (p) => 'http://plates.local/media/' + p;
 
-// Plate chrome shared by every image: double rule, corner registration marks,
-// plate number and title set in the engraver's margin.
+// Plate chrome shared by every image: double rule and corner registration
+// marks. The plate number and title in the engraver's margin are off by
+// default (the profile shows the plates unlabelled); set LABELS to bring them back.
+const LABELS = false;
 function chrome(f, { no, title, right = '' }) {
   box(f, 16, 16, f.w - 33, f.h - 33, C.LINE);
   box(f, 22, 22, f.w - 45, f.h - 45, C.FAINT);
   for (const [x, y] of [[22, 22], [f.w - 23, 22], [22, f.h - 23], [f.w - 23, f.h - 23]]) regmark(f, x, y, 9, C.ACC);
+  if (!LABELS) return;
   if (no) text(f, no, 48, 58, `32px ${MONO}`, C.ACC);
   if (title) text(f, title, 48 + (no ? [...no].length * 16 + 24 : 0), 58, `32px ${MONO}`, C.MUT, { track: 2 });
   if (right) text(f, right, f.w - 48, 58, `32px ${MONO}`, C.FAINT, { align: 'right', track: 2 });
@@ -197,13 +200,12 @@ PLATES['a12n4v-systema'] = async () => {
 // I. PANTHEON: the original profile banner (Athena, Hermes, Asclepius),
 // re-struck in the plate system. Wisdom, exchange, medicine.
 PLATES['a12n4v-pantheon'] = async () => {
-  const W = 1600, H = 600, f = new Frame(W, H);
+  const W = 1600, H = 520, f = new Frame(W, H);
   chrome(f, { no: 'I', title: 'PANTHEON', right: 'SAPIENTIA · COMMERCIVM · MEDICINA' });
   const img = await loadImg('http://plates.local/src/classical-systems-banner.jpg');
-  const s = 2, x = 40, y = 80, w = 1520, h = 440, lw = w / s, lh = h / s;
+  const s = 2, x = 40, y = 40, w = 1520, h = 440, lw = w / s, lh = h / s;
   const L = autocontrast(lumField(img, lw, lh, { fit: 'cover', crop: [0, 20, 1800, 520] }), 0.01);
   ditherInto(f, L, lw, lh, x, y, s, { gamma: 1.15, mod: (cx, cy, v) => v * Math.max(0, Math.min(1, cy / 12, (lh - cy) / 30, cx / 20, (lw - cx) / 20)) });
-  ['ATHENA', 'HERMES', 'ASCLEPIVS'].forEach((t, i) => text(f, t, [290, 800, 1310][i], 560, `32px ${MONO}`, C.MUT, { align: 'center', track: 4 }));
   return { frames: [f], delays: [0] };
 };
 
