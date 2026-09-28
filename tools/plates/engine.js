@@ -155,6 +155,34 @@ function arrowhead(f, x, y, ang, s, c) {
   for (const d of [-0.5, 0.5]) line(f, x, y, x - s * Math.cos(ang + d), y - s * Math.sin(ang + d), c, { w: 2 });
 }
 
+// ---------- glyphs ----------
+// The homonin glyph grid: 24x24 one-bit pixel icons (media/dev/glyphs,
+// media/ethics/glyphs). Loaded from their <rect> SVGs, or drawn here with
+// the same pixel primitives, then stamped at an integer scale.
+function makeGlyph(draw) {
+  const bits = new Uint8Array(576);
+  const G = {
+    set(x, y) { x = Math.round(x); y = Math.round(y); if (x >= 0 && y >= 0 && x < 24 && y < 24) bits[y * 24 + x] = 1; },
+    line(x0, y0, x1, y1) { const n = Math.max(1, Math.ceil(Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0)))); for (let i = 0; i <= n; i++) G.set(x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n); },
+    ring(cx, cy, r) { const n = Math.ceil(2 * Math.PI * r * 2); for (let i = 0; i < n; i++) { const t = i / n * Math.PI * 2; G.set(cx + r * Math.cos(t), cy + r * Math.sin(t)); } },
+    disc(cx, cy, r) { for (let y = -r; y <= r; y++) for (let x = -r; x <= r; x++) if (x * x + y * y <= r * r + r * 0.8) G.set(cx + x, cy + y); },
+    rect(x, y, w, h) { for (let j = y; j < y + h; j++) for (let i = x; i < x + w; i++) G.set(i, j); },
+  };
+  draw(G);
+  return { bits };
+}
+async function loadGlyph(url) {
+  const t = await (await fetch(url)).text();
+  return makeGlyph((G) => { for (const m of t.matchAll(/<rect x="(\d+)" y="(\d+)" width="(\d+)" height="(\d+)"/g)) G.rect(+m[1], +m[2], +m[3], +m[4]); });
+}
+// stamp a glyph at scale k; `half` renders it at 50% (the checker of the twin)
+function glyph(f, g, x, y, k, c, { half = false } = {}) {
+  for (let gy = 0; gy < 24; gy++) for (let gx = 0; gx < 24; gx++) {
+    if (!g.bits[gy * 24 + gx] || (half && (gx + gy) % 2)) continue;
+    f.rect(Math.round(x + gx * k), Math.round(y + gy * k), k, k, c);
+  }
+}
+
 // ---------- output ----------
 function toPNG(f) {
   const cv = canvas(f.w, f.h), g = cv.getContext('2d'), id = g.createImageData(f.w, f.h);

@@ -1,0 +1,64 @@
+name: Profile plugins
+
+# Renders the live parts of the profile onto the `output` branch:
+#   - the contribution snake, in GitHub's palette and in the Homonin palette
+#   - plate IV (PVLSVS): GitHub activity as an ECG and a dithered calendar
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Keep the last good plate in case this render fails
+        run: |
+          mkdir -p dist
+          git fetch --depth=1 origin output && git show origin/output:a12n4v-pvlsvs.gif > /tmp/prev.gif && cp /tmp/prev.gif dist/ || true
+
+      - name: Generate snake animation SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#58a6ff&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
+            dist/github-contribution-grid-snake-homonin.svg?palette=github-dark&color_snake=#f97f3a&color_dots=#1a0f07,#332d28,#4a4541,#b5ac9f,#e8e2d9&color_background=#000000
+
+      - name: Install plate renderer
+        id: renderer
+        continue-on-error: true
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-unifont fonts-freefont-ttf
+          mkdir -p /tmp/pw && cd /tmp/pw && npm init -y >/dev/null && npm install --no-audit --no-fund playwright@1
+          npx playwright install --with-deps chromium
+
+      - name: Render plate IV (PVLSVS)
+        if: steps.renderer.outcome == 'success'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PLAYWRIGHT_PATH: /tmp/pw/node_modules/playwright
+          PLATES_OUT: dist
+        run: |
+          node tools/plates/fetch-pulse.js ${{ github.repository_owner }}
+          node tools/plates/render.js a12n4v-pvlsvs
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
