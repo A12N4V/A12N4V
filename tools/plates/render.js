@@ -2,14 +2,14 @@
 //   node tools/plates/render.js [plate ...] [--preview]
 // Source art is read from the homonin-landing checkout (HOMONIN_MEDIA, default
 // ../homonin-landing/apps/web/public/media) and from this repo's assets/.
-// Output: assets/<plate>.gif|png  (--preview: first frame as PNG into tools/plates/out/)
+// Output: assets/<plate>.gif|png, or $PLATES_OUT (--preview: key frame as PNG into tools/plates/out/)
 const path = require('path');
 const fs = require('fs');
 const { chromium } = require(process.env.PLAYWRIGHT_PATH || '/opt/node22/lib/node_modules/playwright');
 
 const ROOT = path.resolve(__dirname, '../..');
 const MEDIA = process.env.HOMONIN_MEDIA || path.resolve(ROOT, '../homonin-landing/apps/web/public/media');
-const TYPES = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.js': 'text/javascript; charset=utf-8', '.html': 'text/html' };
+const TYPES = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.js': 'text/javascript; charset=utf-8', '.html': 'text/html', '.svg': 'image/svg+xml', '.json': 'application/json' };
 
 (async () => {
   const args = process.argv.slice(2);
@@ -43,7 +43,7 @@ const TYPES = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg'
       if (preview || r.frames.length === 1) return { ext: 'png', data: toPNG(r.frames[preview ? (r.preview ?? 0) : 0]).split(',')[1] };
       return { ext: 'gif', data: b64(encodeGIF(r.frames, r.delays)) };
     }, { name, preview });
-    const outDir = preview ? path.join(__dirname, 'out') : path.join(ROOT, 'assets');
+    const outDir = preview ? path.join(__dirname, 'out') : path.resolve(ROOT, process.env.PLATES_OUT || 'assets');
     fs.mkdirSync(outDir, { recursive: true });
     const out = path.join(outDir, `${name}.${res.ext}`);
     fs.writeFileSync(out, Buffer.from(res.data, 'base64'));
