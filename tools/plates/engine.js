@@ -115,7 +115,7 @@ function ditherText(f, str, x, y, font, c, { track = 0, from = 1.0, to = 0.25, s
   g.font = font; g.fillStyle = '#fff';
   let cx = 4; chars.forEach((ch, i) => { g.fillText(ch, cx, asc + 2); cx += widths[i] + track; });
   const d = g.getImageData(0, 0, cv.width, cv.height).data;
-  const ox = Math.round((align === 'center' ? x - total / 2 : x) - 4), oy = Math.round(y - asc - 2);
+  const ox = Math.round((align === 'center' ? x - total / 2 : align === 'right' ? x - total : x) - 4), oy = Math.round(y - asc - 2);
   for (let py = 0; py < cv.height; py++) {
     const t = py / (asc + 2), ramp = from + (to - from) * Math.max(0, Math.min(1, t));
     for (let px = 0; px < cv.width; px++) {
@@ -129,7 +129,7 @@ function ditherText(f, str, x, y, font, c, { track = 0, from = 1.0, to = 0.25, s
 
 // Hairline primitives (1px, optionally dashed)
 function line(f, x0, y0, x1, y1, c, { dash = 0, gap = 0, w = 1 } = {}) {
-  const dx = x1 - x0, dy = y1 - y0, n = Math.max(Math.abs(dx), Math.abs(dy)) | 0;
+  const dx = x1 - x0, dy = y1 - y0, n = Math.max(1, Math.ceil(Math.max(Math.abs(dx), Math.abs(dy))));
   for (let i = 0; i <= n; i++) {
     if (dash && (i % (dash + gap)) >= dash) continue;
     const x = Math.round(x0 + dx * i / n), y = Math.round(y0 + dy * i / n);
